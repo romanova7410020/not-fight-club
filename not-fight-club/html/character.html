@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character</title>
+      <link rel="stylesheet" href="../style.css" />
+</head>
+<body class="character-page">
+    <div class="container">
+  <header class="header">
+             <nav>
+      <ul>
+        <li><a href="./home.html"><img src="../assets/home.png" alt="home" class="main-icon"></a></li>
+        <li><a href="./character.html"><img src="../assets/character.png" alt="character" class="main-icon"></a></li>
+        <li><a href="./setings.html"><img src="../assets/setting.png" alt="settings" class="main-icon"></a></li>
+        <li><a href="./fight.html"><img src="../assets/fight.png" alt="fight" class="main-icon"></a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+  <div class="character-section">
+        <div class="avatar-section">
+                <img src="../assets/pers2.png" id="main-avatar" alt="pers1" class="avatar-pers" onclick="showAvatarChooser()">
+                <div class="avatar-label">Click to change avatar</div>
+        </div>
+        <div id="avatar-list" id="avatar-list" class="avatar-list" style="display: none;">
+            <img src="../assets/pers1.png" class="avatar-mini" onclick="setAvatar(this.src)">
+            <img src="../assets/pers2.png" class="avatar-mini" onclick="setAvatar(this.src)">
+            <img src="../assets/pers3.png" class="avatar-mini" onclick="setAvatar(this.src)">
+        </div>
+        <h2 id="player-name">Your Name: Nastay</h2>
+        <div class="stats">
+            <div>Win: <span id="wins">0</span></div>
+            <div>Loser: <span id="losses">0</span></div>
+        </div>
+  </div>
+    <button type="submit" class="gotohome-button">Go to home</button>
+  </main>
+    <script src="/index.js" ></script>
+</body>
+</html>

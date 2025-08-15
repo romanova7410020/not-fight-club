@@ -1,0 +1,236 @@
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin: 0;
+}
+
+ul[role='list'],
+ol[role='list'],
+li {
+  list-style: none;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input, button,
+textarea, select {
+  font: inherit;
+}
+
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+:target {
+  scroll-margin-block: 5ex;
+}
+
+.container{
+  max-width: 1440px;  
+margin: 0 auto;
+}
+@font-face {
+  font-family: 'Marauders'; 
+  src: url('./assets/Marauders\ Map.ttf')
+}
+
+.registartion-page {
+background: url(./assets/fon3.jpg);
+background-size: cover; 
+background-repeat: no-repeat;
+background-attachment: fixed; 
+background-position: center; 
+  font-family: 'Marauders'; 
+}
+.header{
+  max-height: 150px;
+  display: flex;
+  justify-content: flex-end;
+}
+.header nav ul {
+  display: flex;
+  gap: 16px; 
+  padding: 0;
+}
+.main-icon{
+  width: 80px;
+  height: 80px;
+}
+.registration-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 200px;
+  gap: 35px;
+}
+h1{
+  font-size: 60px;
+}
+.registration-form input{
+  height: 40px;
+}
+
+.character-page{
+  background: url(./assets/fon2.jpg);
+background-size: cover; 
+background-repeat: no-repeat;
+background-attachment: fixed; 
+background-position: center; 
+  font-family: 'Marauders'; 
+}
+.registration-button{
+   display: inline-block;
+    height: 50px;
+  padding: 10px 20px;
+  background: #2d8b8b;
+  color: rgb(252, 173, 173);
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 22px;
+  text-align: center;
+  text-shadow: 
+   -2px -2px 0 #000,
+   0   -2px 0 #000,
+   2px -2px 0 #000,
+   2px  0   0 #000,
+   2px  2px 0 #000,
+   0    2px 0 #000,
+  -2px  2px 0 #000,
+  -2px  0   0 #000;
+}
+
+.avatar-pers{
+  width: 350px;
+}
+.avatar-label{
+  font-size: 20px;
+  font-weight: 900;
+}
+.character-section{
+display: flex;
+ justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+}
+.stats{
+   font-size: 50px;
+}
+#player-name{
+   font-size: 50px;
+}
+.avatar-mini{
+  width: 150px;
+}
+
+.gotohome-button{
+  display: inline-block;
+position: absolute;
+  left: 50%;
+  top: 60%;   
+  transform: translate(-50%, -50%);
+  height: 80px;
+  padding: 10px 20px;
+  background: #6d1a7e;
+  color: rgb(252, 173, 173);
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 30px;
+  text-align: center;
+  text-shadow: 
+   -2px -2px 0 #000,
+   0   -2px 0 #000,
+   2px -2px 0 #000,
+   2px  0   0 #000,
+   2px  2px 0 #000,
+   0    2px 0 #000,
+  -2px  2px 0 #000,
+  -2px  0   0 #000;
+}
+
+.home-page{
+  background: url(./assets/fon4.png);
+background-size: cover; 
+background-repeat: no-repeat;
+background-attachment: fixed; 
+background-position: center; 
+  font-family: 'Marauders'; 
+}
+.home-content{
+  display: flex;
+  justify-content: space-between;
+}
+.avatar-personhome, .image-ask {
+  max-width: 450px;
+}
+ .image-vs{
+  max-width: 600px;
+}
+
+.fight-button{
+   display: inline-block;
+position: absolute;
+  left: 50%;
+  top: 80%;   
+  width: 300px;
+  transform: translate(-50%, -50%);
+  height: 80px;
+  padding: 10px 20px;
+  background: #8af1f1;
+  color: rgb(247, 166, 44);
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 50px;
+  text-align: center;
+  letter-spacing: 5px;
+  text-shadow: 
+   -2px -2px 0 #000,
+   0   -2px 0 #000,
+   2px -2px 0 #000,
+   2px  0   0 #000,
+   2px  2px 0 #000,
+   0    2px 0 #000,
+  -2px  2px 0 #000,
+  -2px  0   0 #000;
+} 

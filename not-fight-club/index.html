@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Not Fight Club</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body class="registartion-page">
+    <div class="container">
+        <header class="header">
+             <nav>
+      <ul>
+        <li><a href="./html/home.html"><img src="./assets/home.png" alt="home" class="main-icon"></a></li>
+        <li><a href="./html/character.html"><img src="./assets/character.png" alt="character" class="main-icon"></a></li>
+        <li><a href="./html/setings.html"><img src="./assets/setting.png" alt="settings" class="main-icon"></a></li>
+        <li><a href="./html/fight.html"><img src="./assets/fight.png" alt="fight" class="main-icon"></a></li>
+      </ul>
+    </nav>
+        </header>
+        <main class="main">
+            <form class="registration-form" onsubmit="saveName(event)">
+                 <h1>Create character name</h1>
+                <input 
+                type="text" 
+                id="characterName" 
+                name="characterName"
+                placeholder="Enter your name"/>
+               <button type="submit" class="registration-button">Create character</button>
+            </form>
+           
+        </main>
+    </div>
+     <script src="/index.js"></script>
+</body>
+</html>
