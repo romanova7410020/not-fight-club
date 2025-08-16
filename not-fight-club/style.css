@@ -200,13 +200,13 @@ background-position: center;
   justify-content: space-between;
 }
 .avatar-personhome, .image-ask {
-  max-width: 450px;
+  max-width: 350px;
 }
  .image-vs{
   max-width: 600px;
 }
 
-.fight-button{
+.fightbutton {
    display: inline-block;
 position: absolute;
   left: 50%;
@@ -234,3 +234,124 @@ position: absolute;
   -2px  2px 0 #000,
   -2px  0   0 #000;
 } 
+
+.setting-page{
+  background: url(./assets/fon.webp);
+background-size: cover; 
+background-repeat: no-repeat;
+background-attachment: fixed; 
+background-position: center; 
+  font-family: 'Marauders'; 
+}
+.setting-content{
+  position: absolute;
+  top: 20%;
+}
+
+.edit-button{
+  height: 80px;
+  padding: 10px 20px;
+  background: #8b7086;
+  color: rgb(250, 150, 225);
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 50px;
+  text-align: center;
+  letter-spacing: 5px;
+  text-shadow: 
+   -2px -2px 0 #000,
+   0   -2px 0 #000,
+   2px -2px 0 #000,
+   2px  0   0 #000,
+   2px  2px 0 #000,
+   0    2px 0 #000,
+  -2px  2px 0 #000,
+  -2px  0   0 #000;
+}
+#edit-name-form{
+  margin-top: 80px;
+  font-size: 40px;
+}
+#new-player-name{
+  width: 350px;
+  height: 50px;
+  padding-left: 15px;
+}
+#save-name-btn{
+  background-color: #249167;
+  color: #000000;
+  border-radius: 6px;
+}
+#cancel-edit-btn{
+background-color: #f08c3a;
+ border-radius: 6px;
+}
+.fight-page{
+   background: url(./assets/fon5.png);
+background-size: cover; 
+background-repeat: no-repeat;
+background-attachment: fixed; 
+background-position: center; 
+  font-family: 'Marauders'; 
+}
+.fight-place{
+  display: flex;
+  justify-content: space-between;
+}
+
+.health-bar{
+  width: 350px;
+  height: 20px;
+  background-color: #f70909;
+  border-radius: 3px;
+}
+.progress-bar-value {
+  height: 100%;
+  background: #4caf50;
+  width: 99%; 
+  transition: width 0.3s;
+}
+.enemy-avatar{
+  width: 350px;
+  height: 525px;
+}
+
+.battle-place{
+  margin-top: 200px;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+#attack-btn{
+  background-color: rgb(230, 102, 64);
+}
+
+#battle-log-container {
+  width: 1400px;
+  margin: 50px auto;
+  background: #f8b0b0;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 2px 8px #0002;
+}
+#battle-log {
+  height: 200px;
+  overflow-y: auto;
+  background: #fddddd;
+  border: 1px solid #fa5b5b;
+  border-radius: 4px;
+  padding: 6px;
+    font-family: 'Marauders'; 
+  font-size: 15px;
+  text-align: left;
+}
+.log-entry {
+  margin-bottom: 3px;
+}
+.health-progress{
+  font-size: 30px;
+  font-family: 'Marauders'; 
+  font-weight: 400;
+}

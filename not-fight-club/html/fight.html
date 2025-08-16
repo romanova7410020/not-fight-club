@@ -4,8 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fight</title>
+    <link rel="stylesheet" href="../style.css" />
 </head>
-<body>
-    
+<body class="fight-page">
+    <div class="container">
+        <header class="header">
+            <nav>
+            <ul>
+                <li><a href="./home.html"><img src="../assets/home.png" alt="home" class="main-icon"></a></li>
+                <li><a href="./character.html"><img src="../assets/character.png" alt="character" class="main-icon"></a></li>
+                <li><a href="./setings.html"><img src="../assets/setting.png" alt="settings" class="main-icon"></a></li>
+                <li><a href="./fight.html"><img src="../assets/fight.png" alt="fight" class="main-icon"></a></li>
+            </ul>
+            </nav>
+        </header>
+        <main>
+             <div class="fight-place">
+                <div class="player-place">
+                    <img id = "main-avatar" src="../assets/pers2.png" id="main-avatar" alt="pers1" class="avatar-personhome">
+                    <div class="health-bar">
+                            <div class="progress-bar-value"></div>
+                            <p class="health-progress">100/100</p>
+                    </div>
+                </div>
+                <div class="battle-place">
+                    <p>Please pick 1 Attack zone and 2 Defence zones</p>
+                    <form id="battle-form">
+                        <table align="center">
+                        <tr>
+                            <th>Attack Zones</th>
+                            <th>Defence Zones</th>
+                        </tr>
+                        <tr>
+                            <td>
+                            <input type="radio" name="attack" value="head" id="attack-head">
+                            <label for="attack-head">Head</label><br>
+                            <input type="radio" name="attack" value="neck" id="attack-neck">
+                            <label for="attack-neck">Neck</label><br>
+                            <input type="radio" name="attack" value="body" id="attack-body">
+                            <label for="attack-body">Body</label><br>
+                            <input type="radio" name="attack" value="belly" id="attack-belly">
+                            <label for="attack-belly">Belly</label><br>
+                            <input type="radio" name="attack" value="legs" id="attack-legs">
+                            <label for="attack-legs">Legs</label>
+                            </td>
+                            <td>
+                            <input type="checkbox" name="defence" value="head" id="defence-head">
+                            <label for="defence-head">Head</label><br>
+                            <input type="checkbox" name="defence" value="neck" id="defence-neck">
+                            <label for="defence-neck">Neck</label><br>
+                            <input type="checkbox" name="defence" value="body" id="defence-body">
+                            <label for="defence-body">Body</label><br>
+                            <input type="checkbox" name="defence" value="belly" id="defence-belly">
+                            <label for="defence-belly">Belly</label><br>
+                            <input type="checkbox" name="defence" value="legs" id="defence-legs">
+                            <label for="defence-legs">Legs</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="text-align:center; padding-top:10px;">
+                            <button type="submit" id="attack-btn">Attack!</button>
+                            </td>
+                        </tr>
+                        </table>
+                    </form>
+
+                    
+                </div>
+                <div class="enemy-place">
+                    <img id = "enemy-avatar" src="../assets/enemy1.png" id="enemy-avatar" alt="enemy1" class="enemy-avatar">
+                    <div class="health-bar">
+                            <div class="progress-bar-value"></div>
+                            <p class="health-progress">100/100</p>
+                    </div>
+                </div>       
+        </div>
+        <div id="battle-log-container">
+            <h3>Battle Log</h3>
+            <div id="battle-log" class="log-box"></div>
+        </div>
+        </main>
+       
+    </div>
+    <script src="/index.js" ></script>
 </body>
 </html>

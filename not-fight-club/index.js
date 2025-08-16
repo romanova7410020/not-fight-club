@@ -12,8 +12,8 @@ function setAvatar(src){
 
 document.addEventListener('click' , function(e){
     let block = document.querySelector('.avatar-section');
-    if(!block.contains(e.target)){
-       document.getElementById('avatar-list').style.display = 'none';
+     if (block && !block.contains(e.target)) {
+        document.getElementById('avatar-list').style.display = 'none';
     }
 });
 
@@ -23,18 +23,64 @@ function saveName(event){
     localStorage.setItem('playerName', name);
     window.location.href = "./html/character.html";
 }
-
+document.addEventListener('DOMContentLoaded', function() {
 const playerName = localStorage.getItem('playerName') || '';
-document.getElementById('player-name').textContent = 'Your Name: ' + playerName;
+const playerNameEl = document.getElementById('player-name');
+if (playerNameEl) {
+    playerNameEl.textContent = 'Your Name: ' + playerName;
+}
 
-const linkFollow = document.querySelector('.gotohome-button')
+const editButton = document.querySelector(".edit-button");
+const editForm = document.getElementById('edit-name-form');
+const nameSection  = document.querySelector('.setting-content');
+const saveButton = document.getElementById('save-name-btn');
+const cancelButton = document.getElementById('cancel-edit-btn');
+const input = document.getElementById('new-player-name')
+
+editButton.addEventListener('click', function(){
+nameSection.style.display = "none";
+editForm.style.display = "block";
+input.value = playerName;
+input.focus();
+});
+saveButton.addEventListener('click', function() {
+    const newName = input.value.trim();
+    if (newName) {
+        localStorage.setItem('playerName', newName);
+        playerName = newName;
+        if (playerNameEl) {
+            playerNameEl.textContent = 'Your Name: ' + newName;
+        }
+        editForm.style.display = "none";
+        nameSection.style.display = "block";
+    }
+});
+  cancelButton.addEventListener('click', function() {
+            editForm.style.display = "none";
+            nameSection.style.display = "block";
+        });
+})
+
+const linkFollow = document.querySelector('.gotohome-button');
+if(linkFollow) {
 linkFollow.addEventListener('click', function(event){
     event.preventDefault();
     window.location.href = "./home.html";
 });
+}
 
-const linkFollowFight = document.querySelector('.fight-button')
-linkFollowFight.addEventListener('click', function(event){
-    event.preventDefault();
-    window.location.href = "./fight.html";
+const fightButton = document.querySelector('.fightbutton');
+if (fightButton) {
+    fightButton.addEventListener('click', function(event){
+        event.preventDefault();
+        window.location.href = "./fight.html";
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const savedAvatar = localStorage.getItem('selectedAvatar');
+    const mainAvatar = document.getElementById('main-avatar');
+    if (savedAvatar && mainAvatar) {
+        mainAvatar.src = savedAvatar;
+    }
 });

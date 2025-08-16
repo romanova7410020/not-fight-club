@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="../style.css" />
+</head>
+<body class="setting-page">
+    <div class="container">
+          <header class="header">
+            <nav>
+            <ul>
+                <li><a href="./home.html"><img src="../assets/home.png" alt="home" class="main-icon"></a></li>
+                <li><a href="./character.html"><img src="../assets/character.png" alt="character" class="main-icon"></a></li>
+                <li><a href="./setings.html"><img src="../assets/setting.png" alt="settings" class="main-icon"></a></li>
+                <li><a href="./fight.html"><img src="../assets/fight.png" alt="fight" class="main-icon"></a></li>
+            </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="setting-content">
+                <h2 id="player-name">Your Name: Nastay</h2>
+                <button type="submit" class="edit-button">Edit</button>
+            </div>
+            <div id="edit-name-form" style="display:none;">
+                <input type="text" id="new-player-name" placeholder="Enter new name">
+                <button id="save-name-btn">Save</button>
+                <button id="cancel-edit-btn">Cancel</button>
+            </div>
+        </main>
+    </div>
+    <script src="/index.js" ></script>
+</body>
+</html>
