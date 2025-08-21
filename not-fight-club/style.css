@@ -355,3 +355,15 @@ background-position: center;
   font-family: 'Marauders'; 
   font-weight: 400;
 }
+.attacker{
+  color: #6d1a7e;
+  font-weight: 900;
+}
+.defender{
+  color: #4caf50;
+  font-weight: 900;
+}
+.damage{
+  color: #f5091d;
+  font-weight: 900;
+}

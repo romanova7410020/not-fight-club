@@ -37,13 +37,14 @@ const saveButton = document.getElementById('save-name-btn');
 const cancelButton = document.getElementById('cancel-edit-btn');
 const input = document.getElementById('new-player-name')
 
-editButton.addEventListener('click', function(){
+if (editButton) { editButton.addEventListener('click', function(){
 nameSection.style.display = "none";
 editForm.style.display = "block";
 input.value = playerName;
 input.focus();
-});
-saveButton.addEventListener('click', function() {
+})
+};
+if (saveButton) {saveButton.addEventListener('click', function() {
     const newName = input.value.trim();
     if (newName) {
         localStorage.setItem('playerName', newName);
@@ -54,11 +55,13 @@ saveButton.addEventListener('click', function() {
         editForm.style.display = "none";
         nameSection.style.display = "block";
     }
-});
-  cancelButton.addEventListener('click', function() {
+})
+};
+ if (cancelButton){ cancelButton.addEventListener('click', function() {
             editForm.style.display = "none";
             nameSection.style.display = "block";
         });
+    }
 })
 
 const linkFollow = document.querySelector('.gotohome-button');
