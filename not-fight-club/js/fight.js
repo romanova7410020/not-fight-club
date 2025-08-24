@@ -153,11 +153,9 @@ function battleTurn(player, enemy, playerAttackZone, playerDefenseZones) {
   log.push("Оба противника повержены! Ничья.");
 } else if (player.health <= 0) {
   log.push(`<span class="defender">${player.name}</span> проиграл.`);
-  playerLosses++;
   updateBattleStats();
 } else if (enemy.health <= 0) {
   log.push(`<span class="defender">${enemy.name}</span> проиграл.`);
-  playerWins++;
   updateBattleStats();
 }
 
