@@ -104,9 +104,12 @@ function updateHealthBars() {
 
 function battleTurn(player, enemy, playerAttackZone, playerDefenseZones) {
   if (player.health <= 0 || enemy.health <= 0) {
-    alert("Бой окончен.");
-    return;
+    setTimeout(function() {
+      alert("Бой окончен.");
+    }, 100);
+    attackbutton.disabled = true;
   }
+
 
   const log = [];
   const enemyAttackZones = getRandomZones(enemy.zones, enemy.attackZonesCount);
