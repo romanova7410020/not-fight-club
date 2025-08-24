@@ -147,12 +147,16 @@ function battleTurn(player, enemy, playerAttackZone, playerDefenseZones) {
   log.push(`Здоровье: <span class="attacker">${player.name}</span> — ${player.health.toFixed(0)}, <span class="defender">${enemy.name}</span> — ${enemy.health.toFixed(0)}.`);
 
     if (player.health <= 0 && enemy.health <= 0) {
-      log.push("Оба противника повержены! Ничья.");
-    } else if (player.health <= 0) {
-      log.push(`<span class="defender">${player.name}</span> проиграл.`);
-    } else if (enemy.health <= 0) {
-      log.push(`<span class="defender">${enemy.name}</span> проиграл.`);
-    }
+  log.push("Оба противника повержены! Ничья.");
+} else if (player.health <= 0) {
+  log.push(`<span class="defender">${player.name}</span> проиграл.`);
+  playerLosses++;
+  updateBattleStats();
+} else if (enemy.health <= 0) {
+  log.push(`<span class="defender">${enemy.name}</span> проиграл.`);
+  playerWins++;
+  updateBattleStats();
+}
 
 
   const battleLog = document.getElementById('battle-log');
@@ -171,6 +175,7 @@ function battleTurn(player, enemy, playerAttackZone, playerDefenseZones) {
 
 document.addEventListener('DOMContentLoaded', () => {
   enemy = getRandomEnemy();
+
 
   const EnemyAvatar = document.getElementById('enemy-avatar');
   const healthProgress = document.querySelector('.enemy-place .health-progress');

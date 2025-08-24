@@ -80,6 +80,8 @@ if (fightButton) {
     });
 }
 
+
+
 document.addEventListener('DOMContentLoaded', function() {
     const savedAvatar = localStorage.getItem('selectedAvatar');
     const mainAvatar = document.getElementById('main-avatar');
@@ -87,3 +89,5 @@ document.addEventListener('DOMContentLoaded', function() {
         mainAvatar.src = savedAvatar;
     }
 });
+
+
