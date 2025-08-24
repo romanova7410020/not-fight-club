@@ -105,7 +105,7 @@ function battleTurn(player, enemy, playerAttackZone, playerDefenseZones) {
   const enemyAttackZones = getRandomZones(enemy.zones, enemy.attackZonesCount);
   const enemyDefenseZones = getRandomZones(enemy.zones, enemy.defenseZonesCount);
 
-  // Атака игрока
+  
   let playerCrit = isCritical(player.criticalChance);
   let playerDamage = player.damage;
   if (playerCrit) playerDamage *= player.criticalMultiplier;
@@ -120,7 +120,7 @@ function battleTurn(player, enemy, playerAttackZone, playerDefenseZones) {
   enemy.health -= damageToEnemy;
   log.push(`<span class="attacker">${player.name}</span> атаковал <span class="defender">${enemy.name}</span> в ${playerAttackZone} и нанёс <span class="damage">${damageToEnemy.toFixed(0)}</span> урона.`);
 
-  // Атака противника
+ 
   enemyAttackZones.forEach(zone => {
     let enemyCrit = isCritical(enemy.criticalChance);
     let enemyDamage = enemy.damage;
@@ -137,10 +137,8 @@ function battleTurn(player, enemy, playerAttackZone, playerDefenseZones) {
     log.push(`<span class="attacker">${enemy.name}</span> атаковал <span class="defender">${player.name}</span> в ${zone} и нанёс <span class="damage">${damageToPlayer.toFixed(0)}</span> урона.`);
   });
 
-  // Текущее здоровье
   log.push(`Здоровье: <span class="attacker">${player.name}</span> — ${player.health.toFixed(0)}, <span class="defender">${enemy.name}</span> — ${enemy.health.toFixed(0)}.`);
 
-  // Проверка конца боя (после ударов, чтобы последний лог показывался)
   if (player.health <= 0 && enemy.health <= 0) {
     log.push("Оба противника повержены! Ничья.");
   } else if (player.health <= 0) {
@@ -149,7 +147,6 @@ function battleTurn(player, enemy, playerAttackZone, playerDefenseZones) {
     log.push(`<span class="defender">${enemy.name}</span> проиграл.`);
   }
 
-  // Вывод лога в интерфейс
   const battleLog = document.getElementById('battle-log');
   if (battleLog) {
     log.forEach(entry => {
@@ -160,7 +157,7 @@ function battleTurn(player, enemy, playerAttackZone, playerDefenseZones) {
 
   updateHealthBars();
 
-  // Завершаем бой только в конце
+ 
   if (player.health <= 0 || enemy.health <= 0) {
     setTimeout(function() {
       alert("Бой окончен.");

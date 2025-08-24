@@ -11,3 +11,4 @@ const player=
     defenseZonesCount: 1,
     zones: ["head", "neck", "body", "belly", "legs"]
   }
+
